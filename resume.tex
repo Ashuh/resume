@@ -72,8 +72,8 @@ right=0.5in]{geometry}              % specify right page margin
 \textbf{JTorrent} \hfill \href{https://github.com/Ashuh/jtorrent}{github.com/Ashuh/jtorrent} \\
 \vspace{-9pt}
 \begin{itemize}
-  \item Developed BitTorrent client using Java that allows users to share files over BitTorrent protocol
-  \item Implemented GUI using JavaFX and MVVM architecture to achieve unidirectional data flow, allowing for easier reasoning about data flow and ensuring data consistency
+  \item Developed BitTorrent client using Java and JavaFX that allows users to share files over BitTorrent protocol
+  \item Implemented presentation layer using MVVM pattern to allow state changes to be automatically propagated to the view, ensuring consistency between UI and underlying data
   \item Persisted state using H2 database and Hibernate ORM, allowing torrents to be resumed across sessions
   \item Implemented multiple modes of peer discovery via HTTP and UDP trackers, local service discovery, and distributed hash table, increasing chances of finding peers
   \item Setup logging using SLF4J and Logback, utilizing markers to segregate logs into different files based on components and further categorizing peer logs by IP address, allowing for easier debugging and log analysis
