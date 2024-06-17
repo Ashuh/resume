@@ -1,195 +1,115 @@
-%-------------------------
-% Resume in Latex
-% Author : Jake Gutierrez
-% Based off of: https://github.com/sb2nov/resume
-% License : MIT
-%------------------------
+\documentclass[11pt]{article}       % set main text size
+\usepackage[a4paper,                % set paper size to A4. change to letterpaper for US/Canadian resumes
+top=0.5in,                          % specify top page margin
+bottom=0.5in,                       % specify bottom page margin
+left=0.5in,                         % specify left page margin
+right=0.5in]{geometry}              % specify right page margin
+                       
+\usepackage{XCharter}               % set font
+\usepackage[T1]{fontenc}            % output encoding
+\usepackage[utf8]{inputenc}         % input encoding
+\usepackage{enumitem}               % enable lists for bullet points: itemize and \item
+\usepackage[hidelinks]{hyperref}    % format hyperlinks
+\usepackage{titlesec}               % enable section title customization
+\raggedright                        % disable text justification
+\pagestyle{empty}                   % disable page numbering
 
-\documentclass[letterpaper,11pt]{article}
-
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
-\usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
-\usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
-\usepackage{fancyhdr}
-\usepackage[english]{babel}
-\usepackage{tabularx}
+% ensure PDF output will be all-Unicode and machine-readable
 \input{glyphtounicode}
-
-
-%----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
-
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
-
-
-\pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
-
-\urlstyle{same}
-
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
-
-% Sections formatting
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large\bfseries
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-
-% Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
-%-------------------------
-% Custom commands
-\newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
-}
+% format section headings: bolding, size, white space above and below
+\titleformat{\section}{\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule\vspace{-6.5pt}]
 
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
-}
+% format bullet points: size, white space above and below, white space between bullets
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+\setlist[itemize]{itemsep=-2pt, leftmargin=12pt}
 
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-
-%-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% resume starts here
 \begin{document}
 
+% name
+\centerline{\Huge Bryan Zheng}
 
-%----------HEADING----------
-\begin{center}
-    \textbf{\Huge \scshape Bryan Zheng} \\ \vspace{1pt}
-    \small +65 81122199 $|$ \href{mailto:bryan.zhengyx@gmail.com}{\underline{bryan.zhengyx@gmail.com}} $|$
-    \href{https://github.com/Ashuh}{\underline{github.com/Ashuh}}
-\end{center}
+\vspace{5pt}
 
+% contact information
+\centerline{+65 81122199 | \href{mailto:bryan.zhengyx@gmail.com}{bryan.zhengyx@gmail.com} | \href{https://github.com/Ashuh}{github.com/Ashuh}}
 
-%-----------EDUCATION-----------
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {National University of Singapore}{Aug 2018 -- Jun 2022}
-      {Bachelor of Engineering in Mechanical Engineering, Minor in Computer Science}{Singapore}
-    \resumeItemListStart
-        \resumeItem{GPA: 4.68/5.00}
-      \resumeItemListEnd
-  \resumeSubHeadingListEnd
+\vspace{-10pt}
 
+% skills section
+\section*{Skills}
+\textbf{Languages:} Java, C++, Python \\
+\textbf{Libraries, Frameworks, and Tools:} RTI Connext, JavaFX, JUnit, Spring, ROS, Git, Gradle
 
-%-----------EXPERIENCE-----------
-\section{Experience}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-    {ST Engineering}{Dec 2022 -- Present}
-    {Software Engineer}{Singapore}
-    \resumeItemListStart
-        \resumeItem{Collaborated with external teams to develop a backend module responsible for interfacing with external systems using RTI Connext DDS, ensuring proper data exchange and synchronization between systems}
-        \resumeItem{Addressed a critical concurrency issue that was causing occasional data synchronization failures due to out-of-order message processing by using condition variables to delay processing of early messages, resulting in 100\% reliability}
-        \resumeItem{Created SQL scripts to automate the generation of test data in PostgreSQL database, reducing time needed to set up test environments by 95\%}
-        \resumeItem{Migrated 2 project modules from Ant to Gradle, enabling automatic dependency resolution and streamlining the build process, reducing setup and build time by 90\% and 95\% respectively}
-        \resumeItem{Implemented web pages for a Spring application using JSP to allow users to view and edit system parameters, with both client-side and server-side validation to ensure data integrity}
-    \resumeItemListEnd
+\vspace{-6.5pt}
 
-    \resumeSubheading
-      {Micron Technology}{Jun 2020 -- Nov 2020}
-      {Autonomous Vehicle Software Engineer Intern}{Singapore}
-      \resumeItemListStart
-        \resumeItem{Improved path planning reliability by enhancing obstacle representation accuracy through the integration of a new obstacle detection module and the implementation of a new collision checking algorithm}
-        \resumeItem{Enhanced perception system by integrating a vision-based object detection module and merging the results with that of the existing lidar-based obstacle detection module, enabling labelling of obstacles}
-        \resumeItem{Extended the vision-based object detection module to process depth information to determine object positions in 3D space, allowing for more reliable fusion of obstacle data}
-      \resumeItemListEnd
-  \resumeSubHeadingListEnd
+% experience section
+\section*{Experience}
+\textbf{Software Engineer,} \href{https://www.stengg.com/}{ST Engineering} -- Singapore \hfill Dec 2022 -- Present \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Collaborated with external teams to develop backend module responsible for interfacing with external systems using RTI Connext DDS, ensuring proper data exchange and synchronization between systems
+  \item Addressed concurrency issue causing occasional data synchronization failures due to out of order message processing by using condition variables to delay processing of early messages, resulting in 100\% reliability
+  \item Created SQL scripts to automate generation of test data in PostgreSQL database, reducing time needed to set up test environments by 95\%
+  \item Migrated 2 project modules from Ant to Gradle, enabling automatic dependency resolution and streamlining the build process, reducing setup and build time by 90\% and 95\% respectively
+  \item Implemented web pages for Spring application using JSP to allow users to view and edit system parameters, with both client-side and server-side validation to ensure data integrity
+\end{itemize}
 
+\textbf{Autonomous Vehicle Software Engineer Intern,} \href{https://www.micron.com/}{Micron Technology} -- Singapore \hfill Jun 2020 -- Nov 2020 \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Improved path planning reliability by enhancing obstacle representation accuracy through integration of new obstacle detection module and implementation of new collision checking algorithm
+  \item Enhanced perception system by integrating vision-based object detection module and merging results with that of existing lidar-based obstacle detection module, enabling labelling of obstacles
+  \item Extended vision-based object detection module to process depth information to determine object positions in 3D space, allowing for more reliable fusion of obstacle data
+\end{itemize}
 
-%-----------PROJECTS-----------
-\section{Projects}
-    \resumeSubHeadingListStart
-        \resumeProjectHeading
-        {\textbf{JTorrent}}{}
-        \resumeItemListStart
-            \resumeItem{Developed a BitTorrent client using Java that allows users to download and share files over the BitTorrent protocol}
-            \resumeItem{Implemented GUI using JavaFX and MVVM architecture to achieve unidirectional data flow, allowing for easier reasoning about how data flows through the application and ensuring data consistency}
-            \resumeItem{Persisted application state using H2 database and Hibernate ORM, enabling torrents to be resumed across sessions}
-            \resumeItem{Implemented multiple modes of peer discovery via HTTP and UDP trackers, local service discovery, and distributed hash table, increasing the chances of finding peers}
-            \resumeItem{Setup logging using SLF4J and Logback, utilizing markers to segregate logs into different files based on components and further categorizing peer logs by IP address, allowing for easier debugging and log analysis}
-        \resumeItemListEnd
+\vspace{-18.5pt}
 
-    \resumeProjectHeading
-        {\textbf{NUS Module Planner}}{}
-        \resumeItemListStart
-            \resumeItem{Developed an Android application using Java and Android SDK that allows NUS students to plan their timetables}
-            \resumeItem{Implemented search feature by fetching list of modules from NUSMods API and displaying them in a list filtered by user input, allowing users to easily find modules by code}
-            \resumeItem{Displayed user reviews along side detailed module information by fetching data from Disqus API and NUSMods API respectively, to supplement official module information with user experiences}
-            \resumeItem{Implemented clickable module codes that redirect users to respective module pages using regular expressions and Android Navigation Library, allowing for seamless navigation between related modules}
-        \resumeItemListEnd
+% projects section
+\section*{Projects}
+\textbf{JTorrent} \hfill \href{https://github.com/Ashuh/jtorrent}{github.com/Ashuh/jtorrent} \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Developed BitTorrent client using Java that allows users to share files over BitTorrent protocol
+  \item Implemented GUI using JavaFX and MVVM architecture to achieve unidirectional data flow, allowing for easier reasoning about data flow and ensuring data consistency
+  \item Persisted state using H2 database and Hibernate ORM, allowing torrents to be resumed across sessions
+  \item Implemented multiple modes of peer discovery via HTTP and UDP trackers, local service discovery, and distributed hash table, increasing chances of finding peers
+  \item Setup logging using SLF4J and Logback, utilizing markers to segregate logs into different files based on components and further categorizing peer logs by IP address, allowing for easier debugging and log analysis
+\end{itemize}
 
-      \resumeProjectHeading
-          {\textbf{Autonomous Remote-Controlled (RC) Car}}{}
-          \resumeItemListStart
-            \resumeItem{Developed an autonomous car capable of navigating through road networks with obstacles by integrating lidar and NVIDIA Jetson Xavier NX onto an RC car chassis and developing the software stack using C++ and ROS}
-            \resumeItem{Achieved obstacle avoidance by processing lidar data into a cost map, allowing the path planning algorithm to plan collision-free paths by evaluating candidate paths based on their proximity to obstacles}
-            \resumeItem{Achieved smooth vehicle motion by generating paths with minimal curvature using an optimization-based method}
-          \resumeItemListEnd
-    \resumeSubHeadingListEnd
+\textbf{NUS Module Planner} \hfill \href{https://github.com/Ashuh/nus-module-planner}{github.com/Ashuh/nus-module-planner} \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Developed Android application using Java and Android SDK for NUS timetable planning
+  \item Implemented search feature by fetching list of modules from NUSMods API and displaying them in list filtered by user input, allowing users to easily find modules by code
+  \item Displayed user discussions along side detailed module information by fetching data from Disqus API and NUSMods API respectively, to supplement official module information with user experiences
+  \item Implemented clickable module codes that redirect users to respective module pages using regular expressions and Android Navigation Library, allowing for seamless navigation between related modules
+\end{itemize}
 
+\textbf{Autonomous Remote-Controlled (RC) Car} \hfill \href{https://github.com/Ashuh/f1tenth_racecar}{github.com/Ashuh/f1tenth\_racecar} \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Developed autonomous car capable of navigating through road networks with obstacles by integrating lidar and NVIDIA Jetson Xavier NX onto an RC car chassis and developing software stack using C++ and ROS
+  \item Achieved obstacle avoidance by processing lidar data into cost map, allowing path planning algorithm to plan collision-free paths by evaluating candidate paths based on proximity to obstacles
+  % \item Achieved smooth motion by generating paths with minimal curvature using optimization-based method
+\end{itemize}
 
-%-----------PROGRAMMING SKILLS-----------
-\section{Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Languages}{: Java, C++, Python} \\
-     \textbf{Libraries, Frameworks, and Tools}{: RTI Connext, Spring, JavaFX, JUnit, ROS, Git, Gradle} \\
-    }}
- \end{itemize}
+% alternate formatting for projects section
+% \section*{Projects}
+% \begin{itemize}
+%   \item \textbf{QuantSoftware Toolkit:} Open source Python library for data analysis and machine learning for finance
+%   \item \textbf{GitHub Visualization:} Data visualization of Git Log data using D3 to analyze project trends over time
+%   \item \textbf{Recommendation System:} Music and movie recommender systems using collaborative filtering on public datasets
+%   \item \textbf{Mac Setup:} Book that gives step by step instructions on setting up developer environment on Mac OS
+% \end{itemize}
 
+\vspace{-18.5pt}
 
-%-------------------------------------------
+% education section
+\section*{Education}
+\textbf{\href{https://nus.edu.sg/}{National University of Singapore}} \hfill Jun 2022 \\
+BEng in Mechanical Engineering, Minor in Computer Science \hfill GPA: 4.68/5.00
+
 \end{document}
